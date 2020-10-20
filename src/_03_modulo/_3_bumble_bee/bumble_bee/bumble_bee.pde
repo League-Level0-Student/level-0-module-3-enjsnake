@@ -15,13 +15,20 @@ void draw() {
 (see the image on the recipe, it's a diagonal line of circles)
 Use modulo to make the colors alternate between yellow and black
 */
-
-
+for(int i=0; i<500; i++){
+  if(i%2==0){
+    fill(#FFF80A);
+  }
+  else{
+    fill(#030200);
+  }
+  ellipse(i*10,i*10,50,50);
+}
 
 /*
 Now put his head on using drawBeeFace(x,y)
 */
-
+drawBeeFace(500,500);
 }
 
 /**************   Use these methods but  DON'T CHANGE THE CODE BELOW  **************/
@@ -31,12 +38,12 @@ void drawFlower(int x, int y) {
      translate(x, y);
      // draw 5 petals, rotating after each one
      fill(#c6ff89);      // green
-      for (int i = 0; i < 5; i++) {
+      for (int i = 0; i < 5; i=i+10) {
            ellipse(0, -40, 50, 50);
           rotate(radians(72));
      }
      fill(#fff9bb); // light yellow
-     ellipse(0, 0, 50, 50);
+     ellipse(0,0, 50, 50);
 } 
 void drawBeeFace(int BeeFaceX, int BeeFaceY) {
      noStroke();
